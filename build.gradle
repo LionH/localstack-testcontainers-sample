@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.slf4j:slf4j-api:1.7.24"
+    implementation "ch.qos.logback:logback-classic:1.2.3"
+    implementation "com.amazonaws:aws-java-sdk:1.11.657"
+    testImplementation 'junit:junit:4.13'
+    testImplementation  "org.testcontainers:testcontainers:1.14.3"
+    testImplementation  "org.testcontainers:localstack:1.14.3"
+}
+
+test {
+    useJUnit()
+}
